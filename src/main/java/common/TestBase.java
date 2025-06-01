@@ -54,6 +54,11 @@ public class TestBase {
 		drSelect.selectByVisibleText(visibleText);
 	}
 	
+	/**
+	 * Select a radio button by text
+	 * @param rdXpath
+	 * @param rdText
+	 */
 	public void clickOnRadioButton(String rdXpath, String rdText) {
 		By rdButtonLocator = getXpathByParam(rdXpath, rdText);
 		WebElement rdElement = webDriver.findElement(rdButtonLocator);

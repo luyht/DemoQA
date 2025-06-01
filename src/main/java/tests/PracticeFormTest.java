@@ -11,6 +11,7 @@ public class PracticeFormTest extends TestCase{
 
 	@Test
 	public void submitDataSuccessfully() {
+		String projectFolder = System.getProperty("user.dir");
 		StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm();
 		studentRegistrationForm.firstName="Oanh";
 		studentRegistrationForm.lastName="Nguyễn";
@@ -18,7 +19,12 @@ public class PracticeFormTest extends TestCase{
 		studentRegistrationForm.gender="Male";
 		studentRegistrationForm.mobile="0123456789";
 		studentRegistrationForm.dateOfBirth="22 June 2001";
-		
+		studentRegistrationForm.subject="Maths, Chemistry, Computer Science";
+		studentRegistrationForm.hobbies="Sports, Reading, Music";
+		studentRegistrationForm.picture= projectFolder + "\\testcase\\testdata\\PracticeForm_TC01.jpg";
+		studentRegistrationForm.currentAddress="Hà Nội";
+		studentRegistrationForm.state="NCR";
+		studentRegistrationForm.city="Delhi";
 		
 //		HomePage homePage = new HomePage(testBase.webDriver);
 //		testBase.scrollToElement(testBase.getXpathByParam(homePage.lblCard, "Forms"));

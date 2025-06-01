@@ -7,6 +7,11 @@ public class StudentRegistrationForm {
 	public String gender;
 	public String mobile ;
 	public String dateOfBirth;
-	//TODO
+	public String subject;
+	public String hobbies;
+	public String picture;
+	public String currentAddress;
+	public String state;
+	public String city;
 
 }
