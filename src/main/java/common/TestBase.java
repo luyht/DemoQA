@@ -3,7 +3,9 @@ package common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Description: This class contains all common methods related to Selenium
@@ -27,6 +29,7 @@ public class TestBase {
 		
 		// open website => hiển thị homepage
 		webDriver.get(url);
+		webDriver.manage().window().maximize();
 
 	}
 	
@@ -40,5 +43,24 @@ public class TestBase {
 		String newXpath = originalXpath.replace("{@param}",replacement);
 		return By.xpath(newXpath);
 	}
+	/**
+	 * Select a visible text in dropdown box
+	 * @param locator
+	 * @param visibleText
+	 */
+	public void selectByVisibleText(By locator, String visibleText) {
+		WebElement drElement = webDriver.findElement(locator);
+		Select drSelect = new Select(drElement);
+		drSelect.selectByVisibleText(visibleText);
+	}
+	
+	public void clickOnRadioButton(String rdXpath, String rdText) {
+		By rdButtonLocator = getXpathByParam(rdXpath, rdText);
+		WebElement rdElement = webDriver.findElement(rdButtonLocator);
+		scrollToElement(rdButtonLocator);
+		rdElement.click();
+	}
+	
+	
 
 }

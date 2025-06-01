@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-19T11:16:46 ICT" name="Default suite" finished-at="2025-04-19T11:16:51 ICT" duration-ms="5539">
+  <suite started-at="2025-06-01T21:05:32 ICT" name="Default suite" finished-at="2025-06-01T21:05:46 ICT" duration-ms="13838">
     <groups>
     </groups>
-    <test started-at="2025-04-19T11:16:46 ICT" name="Default test" finished-at="2025-04-19T11:16:51 ICT" duration-ms="5539">
-      <class name="tests.TextBoxTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.TextBoxTest@4944252c]" started-at="2025-04-19T11:16:46 ICT" name="setUp" finished-at="2025-04-19T11:16:51 ICT" duration-ms="5358" status="PASS">
+    <test started-at="2025-06-01T21:05:32 ICT" name="Default test" finished-at="2025-06-01T21:05:46 ICT" duration-ms="13838">
+      <class name="tests.PracticeFormTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PracticeFormTest@5ace1ed4]" started-at="2025-06-01T21:05:32 ICT" name="setUp" finished-at="2025-06-01T21:05:41 ICT" duration-ms="9783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="submitSuccessfully()[pri:0, instance:tests.TextBoxTest@4944252c]" started-at="2025-04-19T11:16:51 ICT" name="submitSuccessfully" description="Submit successfully" finished-at="2025-04-19T11:16:51 ICT" duration-ms="152" status="PASS">
+        <test-method signature="submitDataSuccessfully()[pri:0, instance:tests.PracticeFormTest@5ace1ed4]" started-at="2025-06-01T21:05:41 ICT" name="submitDataSuccessfully" finished-at="2025-06-01T21:05:46 ICT" duration-ms="4022" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitSuccessfully -->
-      </class> <!-- tests.TextBoxTest -->
+        </test-method> <!-- submitDataSuccessfully -->
+      </class> <!-- tests.PracticeFormTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

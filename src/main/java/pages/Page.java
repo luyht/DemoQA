@@ -7,12 +7,12 @@ import common.TestBase;
 
 public class Page {
 	public WebDriver driver;
-	public TestBase testBase = new TestBase();
+	public TestBase base = new TestBase();
 
 	//constructor = hàm khởi tạo
 	public Page(WebDriver dr) {
 		this.driver = dr;
-		testBase.webDriver = dr;
+		base.webDriver = dr;
 	}
 	
 	

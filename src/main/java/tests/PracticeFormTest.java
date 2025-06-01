@@ -16,6 +16,8 @@ public class PracticeFormTest extends TestCase{
 		studentRegistrationForm.lastName="Nguyễn";
 		studentRegistrationForm.email="oanh@gmail.com";
 		studentRegistrationForm.gender="Male";
+		studentRegistrationForm.mobile="0123456789";
+		studentRegistrationForm.dateOfBirth="22 June 2001";
 		
 		
 //		HomePage homePage = new HomePage(testBase.webDriver);

@@ -25,7 +25,7 @@ public class TextBoxTest extends TestCase {
 		// Click Elements link trên homepage => chuyển hướng sang Elements Page
 		HomePage homePage = new HomePage(testBase.webDriver);
 		//scroll to Elements
-		homePage.testBase.scrollToElement(testBase.getXpathByParam(homePage.lblCard, elementStr));
+		homePage.base.scrollToElement(testBase.getXpathByParam(homePage.lblCard, elementStr));
 		
 		//click on Elements text, navigate to Elements page
 		ElementsPage elementsPage = homePage.clickOnElements();

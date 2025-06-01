@@ -11,12 +11,12 @@ public class HomePage extends Page{
 	}
 	
 	public ElementsPage clickOnElements() {
-		driver.findElement(testBase.getXpathByParam(lblCard, "Elements")).click();
+		driver.findElement(base.getXpathByParam(lblCard, "Elements")).click();
 		return new ElementsPage(driver);
 	}
 	
 	public FormsPage clickOnForms() {
-		driver.findElement(testBase.getXpathByParam(lblCard, "Forms")).click();
+		driver.findElement(base.getXpathByParam(lblCard, "Forms")).click();
 		return new FormsPage(driver);
 	}
 	
