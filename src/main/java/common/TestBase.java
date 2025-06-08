@@ -66,6 +66,11 @@ public class TestBase {
 		rdElement.click();
 	}
 	
+	public String getTextByLocator(String xpath, String fieldName) {
+		By fieldLocator = getXpathByParam(xpath, fieldName);
+		return webDriver.findElement(fieldLocator).getText();
+	}
+	
 	
 
 }

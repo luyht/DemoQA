@@ -32,7 +32,7 @@ public class AutomationPracticeFormPage extends Page{
 		super(dr);
 	}
 	
-	public void inputData(StudentRegistrationForm st) {
+	public ThanksForSubmitting inputData(StudentRegistrationForm st) {
 		driver.findElement(txtFirstName).sendKeys(st.firstName);
 		driver.findElement(txtLastName).sendKeys(st.lastName);
 		driver.findElement(txtEmail).sendKeys(st.email);
@@ -55,6 +55,7 @@ public class AutomationPracticeFormPage extends Page{
 		driver.findElement(cbCityInput).sendKeys(st.city);
 		driver.findElement(cbCityInput).sendKeys(Keys.ENTER);
 		driver.findElement(btnSubmit).submit();
+		return new ThanksForSubmitting(driver);
 
 	}
 	

@@ -1,15 +1,19 @@
 package tests;
 
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pages.AutomationPracticeFormPage;
 import pages.FormsPage;
 import pages.HomePage;
+import pages.ThanksForSubmitting;
 import tests.entities.StudentRegistrationForm;
 
 public class PracticeFormTest extends TestCase{
 
-	@Test
+	@Test(dataProvider="RegistrationData")
 	public void submitDataSuccessfully() {
 		String projectFolder = System.getProperty("user.dir");
 		StudentRegistrationForm studentRegistrationForm = new StudentRegistrationForm();
@@ -26,14 +30,23 @@ public class PracticeFormTest extends TestCase{
 		studentRegistrationForm.state="NCR";
 		studentRegistrationForm.city="Delhi";
 		
-//		HomePage homePage = new HomePage(testBase.webDriver);
-//		testBase.scrollToElement(testBase.getXpathByParam(homePage.lblCard, "Forms"));
-//		FormsPage formsPage = homePage.clickOnForms();
-		//formsPage.clickOnPracticeForm();
+
 		AutomationPracticeFormPage automationPracticeFormPage= new AutomationPracticeFormPage(testBase.webDriver);
 		testBase.webDriver.navigate().to("https://demoqa.com/automation-practice-form");
 				
-		automationPracticeFormPage.inputData(studentRegistrationForm);
+		ThanksForSubmitting thanksForSubmitting= automationPracticeFormPage.inputData(studentRegistrationForm);
 		
+		String expectedStudentName = studentRegistrationForm.firstName + " " + studentRegistrationForm.lastName;
+		String actualStudentName = thanksForSubmitting.base.getTextByLocator(thanksForSubmitting.valueXpath, "Student Name");
+		assertEquals(expectedStudentName, actualStudentName);
+		//TODO
 	}
+	
+//	@DataProvider(name="RegistrationData")
+//	public String[][] readData() {
+//		String[][] data=new String[1][12];
+//		data[0][0] = "Oanh";
+//	}
+	
+	
 }
